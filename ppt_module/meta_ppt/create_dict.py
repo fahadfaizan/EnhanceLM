@@ -1,4 +1,4 @@
-from utils.position import get_position
+from ppt_module.utils.position import get_position
 from pptx.enum.shapes import MSO_SHAPE_TYPE
 
 def create_dict(prs):
@@ -9,7 +9,7 @@ def create_dict(prs):
     Returns:
         dict: A dictionary containing the structure of the presentation.
         """
-    dct={}
+    dct = {}
 
     for i, slide in enumerate(prs.slides):
         print(f"visited slide {i}")

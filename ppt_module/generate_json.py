@@ -1,5 +1,4 @@
-from extract import extract_data
-# from extract.speaker_notes import extract_speaker_notes
+from ppt_module.extract.extract import extract_data
 
 def generate_output(meta_json):
     output ={}
@@ -21,8 +20,8 @@ def generate_output(meta_json):
         #table
 
         for table_no, (shape_id, shape_pos) in enumerate(value["table"].items()): 
-            table_dat= extract_data(meta_json[slide_no]["ids"][shape_id]) 
-        output[slide_no][f"table_{table_no}"]=table_data
+            table_data = extract_data(meta_json[slide_no]["ids"][shape_id]) 
+            output[slide_no][f"table_{table_no}"]=table_data
 
         #chart
 

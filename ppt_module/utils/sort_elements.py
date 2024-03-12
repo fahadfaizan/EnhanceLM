@@ -1,6 +1,4 @@
-import os
-print(os.getcwd())
-from utils.position import get_position
+from ppt_module.utils.position import get_position
 
 def sort_elements(prs_data):
     """
